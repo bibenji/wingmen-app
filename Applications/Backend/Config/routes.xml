@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<routes>
+	<route url="/admin/" module="Event" action="index" />
+	<route url="/admin/event-insert\.html" module="Event" action="insert" />
+	<route url="/admin/event-update-([0-9]+)\.html" module="Event" action="update" vars="id" />
+	<route url="/admin/event-delete-([0-9]+)\.html" module="Event" action="delete" vars="id" />
+	<route url="/admin/comment-update-([0-9]+)\.html" module="Event" action="updateComment" vars="id" />
+	<route url="/admin/comment-delete-([0-9]+)\.html" module="Event" action="deleteComment" vars="id" />
+</routes>

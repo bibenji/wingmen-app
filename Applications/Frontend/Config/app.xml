@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<definitions>
+	<define var="nombre_events" value="5" />
+	<define var="nombre_caracteres" value="200" />
+	<define var="big_user_id" value="61" />
+</definitions>

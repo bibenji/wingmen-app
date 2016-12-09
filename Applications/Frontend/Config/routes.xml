@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<routes>
+
+	<route url="/" module="Event" action="home" />	
+		
+	<route url="/(past-events|events)/([0-9]+)(.*)" module="Event" action="events" vars="type, deb, rest" />
+	
+	<route url="/event-([0-9]+)\.html" module="Event" action="oneEvent" vars="id"/>
+	<route url="/todo/" module="Event" action="todo" />
+	
+	<route url="/(connexion)/" module="Membre" action="connexion" vars="i_c" />
+	<route url="/forgot/" module="Membre" action="forgot" />
+	
+	<route url="/(account|inscription)/" module="Membre" action="account" vars="i_c" />
+		
+	<route url="/zonemb/event-([0-9]+)/inscription\.html" module="Event" action="inscriptionEvent" vars="id"/>
+	<route url="/zonemb/event-([0-9]+)/desinscription\.html" module="Event" action="desinscriptionEvent" vars="id"/>
+	
+	<route url="/zonemb/commenter-([0-9]+)\.html" module="Event" action="insertComment" vars="com_event" />
+	
+	<route url="/zonemb/comment-update-([0-9]+)\.html" module="Event" action="updateComment" vars="id" />
+	<route url="/zonemb/comment-delete-([0-9]+)\.html" module="Event" action="deleteComment" vars="id" />
+		
+	<route url="/zonemb/new-event\.html" module="Event" action="insert" />
+	<route url="/zonemb/event-([0-9]+)/update\.html" module="Event" action="update" vars="id" />
+	<route url="/zonemb/event-([0-9]+)/delete\.html" module="Event" action="delete" vars="id" />
+	
+	<route url="/zonemb/" module="Membre" action="globalView" />
+	<route url="/zonemb/historique/" module="Membre" action="historique" />
+	
+	<route url="/zonemb/membres/" module="Membre" action="zoneMembre" vars="pseudo" />	
+	<route url="/zonemb/params/" module="Membre" action="params" />
+	
+	<route url="/zonemb/supprimer/" module="Membre" action="supprimer" />
+	
+	<route url="/zonemb/([0-9]+)/(.*)/" module="Membre" action="oneMembre" vars="id, pseudo" />
+	
+	<route url="/zonemb/messagerie/" module="Messagerie" action="messagerie" />
+	<route url="/zonemb/new-mess-([0-9]+)\.html" module="Messagerie" action="newMess" vars="to_id" />
+	<route url="/zonemb/new-mess-conv-([0-9]+)\.html" module="Messagerie" action="newMess" vars="conv_id" />	
+	
+	<route url="/zonemb/notifs/" module="Membre" action="notifications" />
+	
+	<route url="/tipoftheday/" module="Event" action="tipoftheday" />
+	
+</routes>
